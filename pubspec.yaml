@@ -1,0 +1,37 @@
+name: guardia
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  # Ensures Material Icons are available
+  uses-material-design: true
+
+  # Adding assets to the application
+  assets:
+    - assets/logo.png  # Path to your logo
+
+  # To add custom fonts to your application, add a fonts section here.
+  # Example:
+  # fonts:
+  #   - family: Pacifico
+  #     fonts:
+  #       - asset: fonts/Pacifico-Regular.ttf

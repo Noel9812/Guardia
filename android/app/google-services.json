@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "595568435599",
+    "project_id": "guardia-877f2",
+    "storage_bucket": "guardia-877f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595568435599:android:dd119a40e43a8cbcd62bfa",
+        "android_client_info": {
+          "package_name": "com.example.guardia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHUzaPjN5GGX4lQoAR1mikHDbYjSHF5II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
