@@ -1,37 +1,23 @@
 name: guardia
-description: "A new Flutter project."
-publish_to: 'none'
+description: A new Flutter project for an emergency call application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.5.3
+  sdk: ">=2.18.0 <3.0.0" # Ensure the Dart SDK is compatible
 
 dependencies:
   flutter:
     sdk: flutter
-    
-
-  cupertino_icons: ^1.0.8
+  permission_handler: ^10.0.0 # Use the latest version available
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^4.0.0
-
 flutter:
-
-  # Ensures Material Icons are available
   uses-material-design: true
 
-  # Adding assets to the application
-  assets:
-    - assets/logo.png  # Path to your logo
 
-  # To add custom fonts to your application, add a fonts section here.
-  # Example:
-  # fonts:
-  #   - family: Pacifico
-  #     fonts:
-  #       - asset: fonts/Pacifico-Regular.ttf
