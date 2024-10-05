@@ -84,6 +84,9 @@
 - No cloud storage is used in the initial implementation to protect the user’s privacy and ensure data remains under the user’s control.
 - Only the user can access this data, ensuring that sensitive information such as location or media is protected from unauthorized access.
 
+- ![home](https://github.com/user-attachments/assets/6a9b61bc-bdc3-4449-b3e6-7bddd022ff4a)
+
+
 ## Technology Stack
 
 - **Flutter**: The cross-platform mobile app framework for building the UI and app logic.
