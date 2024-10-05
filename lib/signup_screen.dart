@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';  // Import the HomePage file here
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -96,11 +97,17 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
                           scale: _scaleAnimation,
                           child: OutlinedButton.icon(
                             onPressed: () {
-                              // Add Google sign-in functionality
+                              // Navigate to HomePage on button press
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => HomePage()),  // Removed const
+                              );
                             },
                             icon: const Icon(Icons.g_translate, color: Colors.white),
-                            label: const Text('Continue with Google',
-                                style: TextStyle(color: Colors.white)),
+                            label: const Text(
+                              'Continue with Google',
+                              style: TextStyle(color: Colors.white),
+                            ),
                             style: OutlinedButton.styleFrom(
                               backgroundColor: Colors.black,
                               padding: const EdgeInsets.symmetric(vertical: 16),

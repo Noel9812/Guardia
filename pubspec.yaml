@@ -10,9 +10,39 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-    
 
+  # Icons
   cupertino_icons: ^1.0.8
+
+  # Sensor data (accelerometer for fall detection)
+  sensors_plus: ^1.0.0
+
+  # Geolocator for GPS tracking
+  geolocator: ^9.0.0
+
+  # Flutter SMS for sending alerts via SMS
+  flutter_sms: ^2.3.2
+
+  # Camera for video recording
+  camera: ^0.10.0
+
+  # Microphone for audio recording
+  microphone: ^0.1.0
+
+  # Connectivity for checking internet availability
+  connectivity_plus: ^2.0.2
+
+  # Path provider for local storage
+  path_provider: ^2.0.9
+
+  # Secure storage for encrypted local data
+  flutter_secure_storage: ^7.0.1  # Updated for secure local data storage
+
+  # Sound for audio recording/processing
+  flutter_sound: ^9.0.5  # Used for handling audio and noise detection
+
+  # Background fetch to keep the app running in the background
+  background_fetch: ^1.0.0
 
 dev_dependencies:
   flutter_test:
