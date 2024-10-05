@@ -107,4 +107,4 @@
 ---
 
 This README now includes a detailed explanation of the Guardia project and its features.
-This project is developed as part of Intel Gen-AI HAckathon by our team Pixelates.
+   This project is developed as part of Intel Gen-AI HAckathon by our team Pixelates.
