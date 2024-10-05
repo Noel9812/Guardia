@@ -84,9 +84,10 @@
 - No cloud storage is used in the initial implementation to protect the user’s privacy and ensure data remains under the user’s control.
 - Only the user can access this data, ensuring that sensitive information such as location or media is protected from unauthorized access.
 
-- ![home](https://github.com/user-attachments/assets/6a9b61bc-bdc3-4449-b3e6-7bddd022ff4a)
+
 - ![Starting](https://github.com/user-attachments/assets/5ff5bfe1-f1fe-495a-a777-934890b07c18)
 ![about](https://github.com/user-attachments/assets/456f74ac-dfc2-468a-a131-99bf186967ae)
+- ![home](https://github.com/user-attachments/assets/6a9b61bc-bdc3-4449-b3e6-7bddd022ff4a)
 
 ## Technology Stack
 
