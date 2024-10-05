@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart'; // Import Firebase Auth for signup
+import '../../screens/home_screen.dart'; // Import HomeScreen for navigation
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -10,6 +12,8 @@ class SignupScreen extends StatefulWidget {
 class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _scaleAnimation;
+  final TextEditingController _emailController = TextEditingController(); // Email input controller
+  final TextEditingController _passwordController = TextEditingController(); // Password input controller
 
   @override
   void initState() {
@@ -25,6 +29,8 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
   @override
   void dispose() {
     _controller.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
     super.dispose();
   }
 
@@ -33,6 +39,26 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
       _controller.forward();
     } else {
       _controller.reverse();
+    }
+  }
+
+  Future<void> _signUp() async {
+    try {
+      // Firebase authentication for signing up
+      UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+
+      // Navigate to HomeScreen after successful signup
+      Navigator.pushNamed(context, '/home');
+    } catch (e) {
+      print("Signup failed: $e");
+      // You can show an alert here
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Signup failed: ${e.toString()}"),
+        backgroundColor: Colors.red,
+      ));
     }
   }
 
@@ -124,10 +150,11 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
                         ],
                       ),
                       const SizedBox(height: 10),
-                      // Email or Username input field
+                      // Email input field
                       TextField(
+                        controller: _emailController,
                         decoration: InputDecoration(
-                          labelText: 'Email address or username',
+                          labelText: 'Email address',
                           labelStyle: const TextStyle(color: Colors.grey),
                           filled: true,
                           fillColor: Colors.grey[850],
@@ -139,6 +166,23 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
                         style: const TextStyle(color: Colors.white),
                       ),
                       const SizedBox(height: 20),
+                      // Password input field
+                      TextField(
+                        controller: _passwordController,
+                        decoration: InputDecoration(
+                          labelText: 'Password',
+                          labelStyle: const TextStyle(color: Colors.grey),
+                          filled: true,
+                          fillColor: Colors.grey[850],
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                        obscureText: true,
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
                       // Continue button with hover effect
                       MouseRegion(
                         onEnter: (_) => _onHover(true),
@@ -146,9 +190,7 @@ class _SignupScreenState extends State<SignupScreen> with SingleTickerProviderSt
                         child: ScaleTransition(
                           scale: _scaleAnimation,
                           child: ElevatedButton(
-                            onPressed: () {
-                              // Add continue functionality
-                            },
+                            onPressed: _signUp, // Sign up and navigate
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.blueAccent,  // Button color
                               padding: const EdgeInsets.symmetric(vertical: 16),

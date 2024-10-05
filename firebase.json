@@ -1,0 +1,25 @@
+{
+  "dataconnect": {
+    "source": "dataconnect"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "emulators": {
+    "dataconnect": {
+      "port": 9399
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}

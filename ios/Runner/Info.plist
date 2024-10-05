@@ -47,3 +47,9 @@
 	<true/>
 </dict>
 </plist>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>This app needs access to your location to detect when you enter or exit geofences.</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This app needs access to your location while you are using it.</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>This app needs access to your location to detect when you enter or exit geofences.</string>
